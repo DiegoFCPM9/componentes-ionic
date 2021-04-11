@@ -1,0 +1,17 @@
+<app-header title="Toast"></app-header>
+<app-menu></app-menu>
+
+<ion-content id="main" class="ion-padding" fullscreen>
+  <ion-button (click)="presentInfo()" expand="block" fill="clear" shape="round">
+    <ion-icon slot="start" name="help-circle-outline" color="primary"></ion-icon>
+    ¿Qúe es esto?
+  </ion-button>
+  <br><br><br><br><br>
+  <ion-button (click)="presentToast()" expand="block" shape="round">
+    Ver toast
+  </ion-button>
+  <br>
+  <ion-button (click)="presentToastWithOptions()" expand="block" shape="round">
+    Ver toast con opciones
+  </ion-button>
+</ion-content>

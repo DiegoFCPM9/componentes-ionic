@@ -1,0 +1,49 @@
+<app-header title="Badge"></app-header>
+<app-menu></app-menu>
+
+<ion-content class="ion-padding" id="main" fullscreen>
+  <ion-button (click)="clickInfo()" expand="block" fill="clear" shape="round">
+    <ion-icon slot="start" name="help-circle-outline" color="primary"></ion-icon>
+    ¿Qúe es esto?
+  </ion-button>
+  
+  <ion-list>
+    <!-- Colores -->
+    <ion-item>
+      <p>Primary</p><ion-badge slot="end" color="primary">badge</ion-badge>
+    </ion-item>
+    <ion-item>
+      <p>Secondary</p><ion-badge slot="end" color="secondary">badge</ion-badge>
+    </ion-item>
+    <ion-item>
+      <p>Tertiary</p><ion-badge slot="end" color="tertiary">badge</ion-badge>
+    </ion-item>
+    <ion-item>
+      <p>Success</p><ion-badge slot="end" color="success">badge</ion-badge>
+    </ion-item>
+    <ion-item>
+      <p>Warning</p><ion-badge slot="end" color="warning">badge</ion-badge>
+    </ion-item>
+    <ion-item>
+      <p>Danger</p><ion-badge slot="end" color="danger">badge</ion-badge>
+    </ion-item>
+    <ion-item>
+      <p>Light</p><ion-badge slot="end" color="light">badge</ion-badge>
+    </ion-item>
+    <ion-item>
+      <p>Meduim</p><ion-badge slot="end" color="medium">badge</ion-badge>
+    </ion-item>
+    <ion-item>
+      <p>Dark</p><ion-badge slot="end" color="dark">badge</ion-badge>
+    </ion-item>
+  </ion-list>
+  
+  <ion-list>
+    <!-- Item con badge en strat and end -->
+    <ion-item>
+      <ion-badge slot="start">badgeStart</ion-badge>
+      <ion-label>Item</ion-label>
+      <ion-badge slot="end">badgeEnd</ion-badge>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,20 @@
+<app-header title="Refresher"></app-header>
+<app-menu></app-menu>
+
+<ion-content class="ion-padding" id="main">
+  <ion-refresher slot="fixed" (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content
+      pullingIcon="chevron-down-circle-outline"
+      pullingText="Baja para recaragar."
+      refreshingSpinner="dots"
+      refreshingText="Cargando..."
+    ><!-- "bubbles", "circles", "circular", "crescent", "dots", "lines", "lines-small"  -->
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ion-list>
+    <ion-item *ngFor='let i of items; let ii=index' class="animate__animated animate__fadeInUp">
+      <ion-label>Item: {{ii+1}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

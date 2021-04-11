@@ -1,0 +1,121 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Segment</ion-title>
+  </ion-toolbar>
+  <ion-segment value="" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="">
+      <ion-label>Todos</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="DC Comics">
+      <ion-label>DC Comics</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Marvel">
+      <ion-label>Marvel</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Segments">
+      <ion-label>Segments</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+
+<ion-content>
+  <ion-list id='skeleton' class="animate__animated animate__fadeIn animate__faster" *ngIf='(superHeroes | async)===null'>
+    <ion-item *ngFor='let i of [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]'>
+      <ion-label>
+        <h3><ion-skeleton-text animated style="width: 50%"></ion-skeleton-text></h3>
+        <p><ion-skeleton-text animated style="width: 40%"></ion-skeleton-text></p>
+      </ion-label>
+      <ion-skeleton-text animated style="width: 30%" slot="end"></ion-skeleton-text>
+    </ion-item>
+  </ion-list>
+  <ion-list id="data">
+    <ion-item *ngFor='let heroe of (superHeroes | async) | filter:textSearch:"publisher"'>
+      <ion-label>
+        <h3>{{heroe.superhero}} <small>{{heroe.alter_ego}}</small></h3>
+        <p>{{heroe.first_appearance}}</p>
+      </ion-label>
+      <ion-label slot="end" class="ion-text-right">{{heroe.publisher}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <br><br><br><br><br>
+  <!-- Default Segment -->
+  <ion-segment (ionChange)="segmentChanged($event)" id="segment-1">
+    <ion-segment-button value="friends">
+      <ion-label>Friends</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="enemies">
+      <ion-label>Enemies</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <br><br><br>
+  <!-- Disabled Segment -->
+  <ion-segment (ionChange)="segmentChanged($event)" disabled value="sunny" id="segment-2">
+    <ion-segment-button value="sunny">
+      <ion-label>Sunny</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="rainy">
+      <ion-label>Rainy</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <br><br><br>
+  <!-- Segment with anchors -->
+  <ion-segment (ionChange)="segmentChanged($event)" id="segment-3">
+    <ion-segment-button value="dogs">
+      <ion-label>Dogs</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="cats">
+      <ion-label>Cats</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <br><br><br>
+  <!-- Scrollable Segment -->
+  <ion-segment scrollable value="heart" id="segment-4">
+    <ion-segment-button value="home">
+      <ion-icon name="home"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="heart">
+      <ion-icon name="heart"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="pin">
+      <ion-icon name="pin"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="star">
+      <ion-icon name="star"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="call">
+      <ion-icon name="call"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="globe">
+      <ion-icon name="globe"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="basket">
+      <ion-icon name="basket"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+  <br><br><br>
+  <!-- Segment with secondary color -->
+  <ion-segment (ionChange)="segmentChanged($event)" color="secondary" id="segment-5">
+    <ion-segment-button value="standard">
+      <ion-label>Standard</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="hybrid">
+      <ion-label>Hybrid</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="sat">
+      <ion-label>Satellite</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <br><br><br>
+  <!-- Segment with default selection -->
+  <ion-segment (ionChange)="segmentChanged($event)" value="javascript" id="segment-6">
+    <ion-segment-button value="python">
+      <ion-label>Python</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="javascript">
+      <ion-label>Javascript</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+</ion-content>

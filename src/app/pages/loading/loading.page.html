@@ -1,0 +1,12 @@
+<app-header title="Loading"></app-header>
+<app-menu></app-menu>
+
+<ion-content class="ion-padding" id="main" fullscreen>
+  <ion-button (click)="mostrarLoading(1, 'Espera 3 segundos...')" expand="block" fill="clear" shape="round">
+    Mostrar loading
+  </ion-button>
+
+  <ion-button (click)="mostrarLoading(2, 'Espera 3 segundos...')" expand="block" fill="clear" shape="round">
+    Mostrar loading perzonalizado
+  </ion-button>
+</ion-content>

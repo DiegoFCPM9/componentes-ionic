@@ -1,0 +1,113 @@
+<app-header [title]="title || 'Inputs'" ></app-header>
+<app-menu></app-menu>
+
+<ion-content class="ion-padding" id="main" fullscreen>
+  <ion-list class="ion-padding">
+    <h5>Input por defecto</h5>
+    <ion-item>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <h5>Input con valor</h5>
+    <ion-item>
+      <ion-input value="Valor"></ion-input>
+    </ion-item>
+
+    <h5>Input con placeholder</h5>
+    <ion-item>
+      <ion-input placeholder="Placeholder"></ion-input>
+    </ion-item>
+
+    <h5>Input con botón de limpieza para el valor</h5>
+    <ion-item>
+      <ion-input clearInput value="Bórrame"></ion-input>
+    </ion-item>
+
+    <h5>Input númerico</h5>
+    <ion-item>
+      <ion-input type="number" placeholder="Número"></ion-input>
+    </ion-item>
+
+    <h5>Input desabilitado</h5>
+    <ion-item>
+      <ion-input value="Desabilitado" disabled></ion-input>
+    </ion-item>
+
+    <h5>Input sólo lectura</h5>
+    <ion-item>
+      <ion-input value="Sólo lectura" readonly></ion-input>
+    </ion-item>
+    
+    <h3>Inputs con labels</h3>
+    <h5>Label por defecto</h5>
+    <ion-item>
+      <ion-label>Label por defecto: </ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <h5>Label en floating</h5>
+    <ion-item>
+      <ion-label position="floating">Label en floating</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <h5>Label en fixed</h5>
+    <ion-item>
+      <ion-label position="fixed">Label en fixed: </ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <h5>Label en stacked</h5>
+    <ion-item>
+      <ion-label position="stacked">Label en stacked</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
+
+    <h3>Personaliza el título</h3>
+    <ion-item>
+      <ion-label position="floating">Título</ion-label>
+      <ion-input placeholder="Título" [(ngModel)]="title"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <form #form="ngForm" (ngSubmit)="formSubmit(form)" [hidden]="formState">
+    <ion-list-header>
+      <ion-label>Ingresa tus datos</ion-label>
+      <ion-chip outline color="success" [color]="form.valid ? 'success' : 'danger'">
+        <ion-icon [name]="form.valid ? 'checkmark-circle' : 'close-circle'"></ion-icon>
+        <ion-label>{{form.valid ? 'Válido' : 'Inválido'}}</ion-label>
+      </ion-chip>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label position="floating">E-Mail<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input 
+        type="email"
+        placeholder="E-Mail"
+        name="E-Mail"
+        [(ngModel)]="user.email"
+        pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$"
+        required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña<ion-text color="danger">*</ion-text></ion-label>
+      <ion-input 
+        type="password"
+        placeholder="Contraseña"
+        name="Contraseña"
+        [(ngModel)]="user.password"
+        required></ion-input>
+    </ion-item>
+    
+    <ion-button block color="primary" type="submit" [disabled]="!form.valid">
+      Listo
+    </ion-button>
+  </form>
+
+  <ion-infinite-scroll threshold="47px" (ionInfinite)="loadData()">
+    <center>
+      <section><ion-img src="/assets/Infinite.png" class="infinite"></ion-img></section>
+      <section><ion-label class="infinite-label">Cargando el formulario...</ion-label></section>
+    </center>
+  </ion-infinite-scroll>
+</ion-content>

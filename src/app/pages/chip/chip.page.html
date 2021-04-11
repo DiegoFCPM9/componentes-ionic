@@ -1,0 +1,76 @@
+<app-header title="Chip"></app-header>
+<app-menu></app-menu>
+
+<ion-content class="ion-padding" id="main" fullscreen>
+  <ion-button (click)="clickInfo()" expand="block" fill="clear" shape="round">
+    <ion-icon slot="start" name="help-circle-outline" color="primary"></ion-icon>
+    ¿Qúe es esto?
+  </ion-button>
+
+  <h3>Basic</h3>
+  <ion-chip>
+    <ion-label>Default</ion-label>
+  </ion-chip>
+  <ion-chip>
+    <ion-icon name="checkmark-circle" color="primary"></ion-icon>
+    <ion-label>Icon</ion-label>
+  </ion-chip>
+  <ion-chip>
+    <ion-avatar>
+      <img src="/assets/Avatar.jpg"/>
+    </ion-avatar>
+    <ion-label>Avatar</ion-label>
+  </ion-chip>
+  
+  <h3>Colors</h3>
+  <ion-chip color="primary">
+    <ion-label>Primary</ion-label>
+  </ion-chip>
+  <ion-chip color="secondary">
+    <ion-label>Secondary</ion-label>
+  </ion-chip>
+  <ion-chip color="tertiary">
+    <ion-label>Tertiary</ion-label>
+  </ion-chip>
+  <ion-chip color="medium">
+    <ion-label>Medium</ion-label>
+  </ion-chip>
+  <ion-chip color="warning">
+    <ion-label>Warning</ion-label>
+  </ion-chip>
+  
+  <h3>Icons</h3>
+  <ion-chip outline color="primary">
+    <ion-icon name="pin"></ion-icon>
+    <ion-label>Madison</ion-label>
+    <ion-icon name="close-circle"></ion-icon>
+  </ion-chip>
+  <ion-chip outline color="secondary">
+    <ion-icon name="wine"></ion-icon>
+    <ion-label>Nightlife</ion-label>
+    <ion-icon name="close-circle"></ion-icon>
+  </ion-chip>
+  <ion-chip outline color="tertiary">
+    <ion-icon name="restaurant"></ion-icon>
+    <ion-label>Dining</ion-label>
+    <ion-icon name="close-circle"></ion-icon>
+  </ion-chip>
+  <ion-chip outline color="dark">
+    <ion-icon name="videocam"></ion-icon>
+    <ion-label>Entertainment</ion-label>
+    <ion-icon name="close-circle"></ion-icon>
+  </ion-chip>
+
+  <h3>Two Colors</h3>
+  <ion-chip color="warning">
+    <ion-label color="danger">warning/danger</ion-label>
+  </ion-chip>
+  <ion-chip color="danger">
+    <ion-label color="warning">danger/warning</ion-label>
+  </ion-chip>
+
+  <h3>Disabled</h3>
+  <ion-chip [disabled]="true">
+    <ion-label>Disabled Chip</ion-label>
+  </ion-chip>
+</ion-content>

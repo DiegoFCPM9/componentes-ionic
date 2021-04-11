@@ -1,0 +1,19 @@
+<ion-header class="ion-no-border" translucent>
+  <ion-toolbar>
+    <ion-title color="primary"><b>Componentes</b></ion-title>
+    <ion-buttons slot="end">
+      <ion-icon name="sunny" size="small"></ion-icon>
+      <ion-toggle (ionChange)=toggleDarkMode() [ngModel]="darkMode"></ion-toggle>
+      <ion-icon name="moon" size="small"></ion-icon>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <ion-list>
+    <ion-item *ngFor="let p of pages | async" [routerLink]="p.redirectTo" detail>
+      <ion-icon [name]="p.icon" slot="start" color="primary"></ion-icon>
+        <p color="secondary">{{p.name}}</p>
+    </ion-item> 
+  </ion-list>
+</ion-content>

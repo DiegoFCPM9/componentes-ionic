@@ -1,0 +1,77 @@
+<app-header title="Range"></app-header>
+<app-menu></app-menu>
+
+<ion-content class="ion-padding" id="main" fullscreen>
+  <ion-list>
+    <h3>Range por defecto</h3>
+    <ion-item>
+      <ion-range color="danger" pin="true"></ion-range>
+    </ion-item>
+  
+    <h3>Range con intervalo</h3>
+    <ion-item>
+      <ion-range min="-100" max="100" color="secondary">
+        <ion-label slot="start">-100</ion-label>
+        <ion-label slot="end">100</ion-label>
+      </ion-range>
+    </ion-item>
+  
+    <h3>Range "controlador de brillo"</h3>
+    <ion-item>
+      <ion-range min="20" max="80" step="2">
+        <ion-icon size="small" slot="start" name="sunny"></ion-icon>
+        <ion-icon slot="end" name="sunny"></ion-icon>
+      </ion-range>
+    </ion-item>
+  
+    <h3>Range con intervalos de posición</h3>
+    <ion-item>
+      <ion-range min="1000" max="2000" step="100" snaps="true" color="secondary"></ion-range>
+    </ion-item>
+  
+    <h3>Range con intervalos de posición sin vista</h3>
+    <ion-item>
+      <ion-range min="1000" max="2000" step="100" snaps="true" ticks="false" color="secondary"></ion-range>
+    </ion-item>
+  
+    <h3>Range doble</h3>
+    <ion-item>
+      <ion-range dualKnobs="true" min="21" max="72" step="3" snaps="true"></ion-range>
+    </ion-item>
+
+    <h1>Ejemplo de IONIC</h1>
+    <ion-list>
+      <ion-list-header>
+        Adjust Display
+      </ion-list-header>
+
+      <ion-item>
+        <ion-range value="20">
+          <ion-icon slot="start" size="small" name="sunny"></ion-icon>
+          <ion-icon slot="end" name="sunny"></ion-icon>
+        </ion-range>
+      </ion-item>
+
+      <ion-item>
+        <ion-range min="-200" max="200" pin color="secondary">
+          <ion-icon slot="start" size="small" name="contrast"></ion-icon>
+          <ion-icon slot="end" name="contrast"></ion-icon>
+        </ion-range>
+      </ion-item>
+
+      <ion-item>
+        <ion-range id="dual-range" dual-knobs pin color="dark">
+          <ion-icon slot="start" size="small" name="brush"></ion-icon>
+          <ion-icon slot="end" name="brush"></ion-icon>
+        </ion-range>
+      </ion-item>
+
+      <ion-item>
+        <ion-range min="1000" max="2000" step="100" value="1400" snaps color="danger">
+          <ion-icon slot="start" size="small" color="danger" name="thermometer"></ion-icon>
+          <ion-icon slot="end" color="danger" name="thermometer"></ion-icon>
+        </ion-range>
+      </ion-item>
+    </ion-list>
+  </ion-list>
+</ion-content>

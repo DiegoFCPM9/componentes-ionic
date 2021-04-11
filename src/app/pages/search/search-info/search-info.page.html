@@ -1,0 +1,45 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="volver()">
+        <ion-icon slot="icon-only" name="arrow-undo-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Search</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <h5>Searchbar por defecto</h5>
+  <ion-searchbar></ion-searchbar>
+
+  <h5>Searchbar con botón de cancelar permanente</h5>
+  <ion-searchbar showCancelButton="always"></ion-searchbar>
+
+  <h5>Searchbar con botón de cancelar en foco</h5>
+  <ion-searchbar showCancelButton="focus"></ion-searchbar>
+
+  <h5>Searchbar con color</h5>
+  <ion-searchbar color="primary"></ion-searchbar>
+
+  <h5>Searchbar con valor</h5>
+  <ion-searchbar value="Ionic"></ion-searchbar>
+
+  <h5>Searchbar de tipo teléfono</h5>
+  <ion-searchbar type="tel"></ion-searchbar>
+
+  <h5>Searchbar de tipo númerico</h5>
+  <ion-searchbar inputmode="numeric"></ion-searchbar>
+
+  <h5>Searchbar desabilitado</h5>
+  <ion-searchbar disabled="true"></ion-searchbar>
+
+  <h5>Searchbar con botón de cancelar perzonalizado</h5>
+  <ion-searchbar showCancelButton="focus" cancelButtonText="Custom Cancel"></ion-searchbar>
+
+  <h5>Searchbar animada</h5>
+  <ion-searchbar animated></ion-searchbar>
+
+  <h5>Searchbar con placeholder</h5>
+  <ion-searchbar placeholder="Placeholder"></ion-searchbar>
+</ion-content>

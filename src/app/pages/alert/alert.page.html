@@ -1,0 +1,32 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Alert</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<app-header title="Alert"></app-header>
+<app-menu></app-menu>
+
+<ion-content class="ion-padding" id="main" fullscreen>
+  <ion-button (click)="clickAlert(1)" expand="block">
+    Mostrar Alert
+  </ion-button>
+  <ion-button (click)="clickAlert(2)" expand="block">
+    Mostrar Alert Multiple Buttons
+  </ion-button>
+  <ion-button (click)="clickAlert(3)" expand="block">
+    Mostrar Alert Confirm
+  </ion-button>
+  <ion-button (click)="clickAlert(4)" expand="block">
+    Mostrar Alert Prompt
+  </ion-button>
+  <ion-button (click)="clickAlert(5)" expand="block">
+    Mostrar Alert Radio
+  </ion-button>
+  <ion-button (click)="clickAlert(6)" expand="block">
+    Mostrar Alert Checkbox
+  </ion-button>
+</ion-content>

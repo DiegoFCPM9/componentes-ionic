@@ -1,0 +1,45 @@
+<app-header title="Textarea"></app-header>
+<app-menu></app-menu>
+
+<ion-content class="ion-padding" id="main" fullscreen>
+  <ion-button (click)="clickInfo()" expand="block" fill="clear" shape="round">
+    <ion-icon slot="start" name="help-circle-outline" color="primary"></ion-icon>
+    ¿Qúe es esto?
+  </ion-button>
+
+  <h5>Textarea por defecto</h5>
+  <ion-textarea></ion-textarea>
+
+  <h5>Textarea en un item con placeholder</h5>
+  <ion-item>
+    <ion-textarea placeholder="Placeholder"></ion-textarea>
+  </ion-item>
+
+  <h5>Textarea en un item con un label floating</h5>
+  <ion-item>
+    <ion-label position="floating">Floating</ion-label>
+    <ion-textarea></ion-textarea>
+  </ion-item>
+
+  <h5>Textarea desabilitado y sólo lectura en un item con un label stacked</h5>
+  <ion-item>
+    <ion-label position="stacked">Resumen</ion-label>
+    <ion-textarea
+      disabled
+      readonly
+      value="IONIC permite a los desarrolladores crear aplicaciones móviles de alta calidad y rendimiento.">
+    </ion-textarea>
+  </ion-item>
+
+  <h5>Textarea que borra el valor al editar</h5>
+  <ion-item>
+    <ion-label>Comment</ion-label>
+    <ion-textarea value="Pruébame" clearOnEdit="true"></ion-textarea>
+  </ion-item>
+
+  <h5>Textarea con número personalizado de filas y columnas</h5>
+  <ion-item>
+    <ion-label>Notes</ion-label>
+    <ion-textarea rows="6" cols="20" placeholder="Enter any notes here..."></ion-textarea>
+  </ion-item>
+</ion-content>

@@ -1,0 +1,84 @@
+<app-header title="Grid"></app-header>
+<app-menu></app-menu>
+
+<ion-content id="main" fullscreen>
+  <ion-button (click)="clickInfo()" expand="block" fill="clear" shape="round">
+    <ion-icon slot="start" name="help-circle-outline" color="primary"></ion-icon>
+    ¿Qúe es esto?
+  </ion-button>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size-lg="3" size-md="4" size-sm="12" *ngFor="let item of [0,0,0,0,0,0,0,0,0,0,0,0]">
+        <ion-card>
+          <ion-img src="/assets/Avatar.jpg"></ion-img>
+        </ion-card>
+
+        <ion-card-header>
+          <ion-card-subtitle>Awesome Subtitle</ion-card-subtitle>
+          <ion-card-title>Awesome Title</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima maiores non placeat error dignissimos dolorem tenetur quisquam illo quidem? Non, id necessitatibus quia veritatis rerum illo suscipit soluta nostrum? Necessitatibus.
+        </ion-card-content>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card>
+          <ion-img src="/assets/Avatar.jpg"></ion-img>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">
+        <ion-card>
+          <ion-img src="/assets/Avatar.jpg"></ion-img>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="6">6</ion-col>
+      <ion-col size="6">6</ion-col>
+
+      <ion-col size="4">4</ion-col>
+      <ion-col size="4">4</ion-col>
+      <ion-col size="4">4</ion-col>
+
+      <ion-col size="3">3</ion-col>
+      <ion-col size="3">3</ion-col>
+      <ion-col size="3">3</ion-col>
+      <ion-col size="3">3</ion-col>
+
+      <ion-col size="2">2</ion-col>
+      <ion-col size="2">2</ion-col>
+      <ion-col size="2">2</ion-col>
+      <ion-col size="2">2</ion-col>
+      <ion-col size="2">2</ion-col>
+      <ion-col size="2">2</ion-col>
+
+      <ion-col size="1">1</ion-col>
+      <ion-col size="1">1</ion-col>
+      <ion-col size="1">1</ion-col>
+      <ion-col size="1">1</ion-col>
+      <ion-col size="1">1</ion-col>
+      <ion-col size="1">1</ion-col>
+      <ion-col size="1">1</ion-col>
+      <ion-col size="1">1</ion-col>
+      <ion-col size="1">1</ion-col>
+      <ion-col size="1">1</ion-col>
+      <ion-col size="1">1</ion-col>
+      <ion-col size="1">1</ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,169 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='/'></ion-back-button>
+    </ion-buttons>
+    <ion-title>Toolbar</ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-title>Sólo título</ion-title>
+  </ion-toolbar>
+  
+  <ion-toolbar>
+    <ion-title>Botón de volver (end)</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref='/'></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+  <ion-toolbar>
+    <ion-title size="small">Un gran título de página, el título se adapta a ello</ion-title>
+  </ion-toolbar>
+  
+  <ion-toolbar>
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button color="secondary">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Iconos</ion-title>
+  </ion-toolbar>
+  
+  <ion-toolbar>
+    <ion-buttons slot="secondary">
+      <ion-button fill="solid">
+        <ion-icon slot="start" name="person-circle"></ion-icon>
+        Contacto
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Botones sólidos</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button fill="solid" color="secondary">
+        Ayuda
+        <ion-icon slot="end" name="help-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+  <ion-toolbar>
+    <ion-buttons slot="secondary">
+      <ion-button fill="outline">
+        <ion-icon slot="start" name="star"></ion-icon>
+        Fav
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Botones outline</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button color="danger" fill="outline">
+        Editar
+        <ion-icon slot="end" name="create"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+  <ion-toolbar>
+    <ion-buttons slot="secondary">
+      <ion-button>
+        Cuenta
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button color="danger">
+        Salir
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Botones sólo texto</ion-title>
+  </ion-toolbar>
+  
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="star"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Menú izquierdo</ion-title>
+  </ion-toolbar>
+  
+  <ion-toolbar>
+    <ion-buttons slot="primary">
+      <ion-button (click)="clickedStar()">
+        <ion-icon slot="icon-only" name="star"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Menú derecho</ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+  <ion-toolbar>
+    <ion-searchbar placeholder="Búsqueda"></ion-searchbar>
+    <ion-buttons slot="end">
+      <ion-button (click)="clickedSearch()">
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+  <ion-toolbar>
+    <ion-segment value="all">
+      <ion-segment-button value="all">
+        Todo
+      </ion-segment-button>
+      <ion-segment-button value="favorites">
+        Favoritos
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  
+  <ion-toolbar color="secondary">
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button color="primary">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Toolbar con color</ion-title>
+  </ion-toolbar>
+  
+  <ion-toolbar color="dark">
+    <ion-buttons slot="secondary">
+      <ion-button>
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+      <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-button color="danger">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Toolbar con color</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-button (click)="presentInfo()" expand="block" fill="clear" shape="round">
+    <ion-icon slot="start" name="help-circle-outline" color="primary"></ion-icon>
+    ¿Qúe es esto?
+  </ion-button>
+</ion-content>

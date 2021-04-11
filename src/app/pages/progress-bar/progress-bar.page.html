@@ -1,0 +1,33 @@
+<app-header title="Progress Bar"></app-header>
+<app-menu></app-menu>
+
+<ion-content class="ion-padding" id="main" fullscreen>
+  <h5>Progressbar por defecto</h5>
+  <ion-progress-bar></ion-progress-bar>
+
+  <h5>Progressbar por defecto con 50%</h5>
+  <ion-progress-bar value="0.5"></ion-progress-bar>
+
+  <h5>Progressbar de colores</h5>
+  <ion-progress-bar color="secondary" value="0.5"></ion-progress-bar>
+  <br>
+  <ion-progress-bar color="tertiary" value="0.5"></ion-progress-bar>
+
+  <h5>Progressbar con buffer</h5>
+  <ion-progress-bar value="0.25" buffer="0.5"></ion-progress-bar>
+  
+  <h5>Progressbar "indeterminate"</h5>
+  <ion-progress-bar type="indeterminate"></ion-progress-bar>
+  
+  <h5>Progressbar "indeterminate" en reversa</h5>
+  <ion-progress-bar type="indeterminate" reversed="true"></ion-progress-bar>
+
+  <h3>Progressbar personalizado con Range</h3>
+  <ion-progress-bar type="determinate" [value]="percent" color="warning"></ion-progress-bar>
+  <center>
+    <ion-item>
+      <ion-text color="success">{{value}}</ion-text>
+      <ion-range min="0" max="100" color="success" pin="true" (ionChange)="rangeChange($event)"></ion-range>
+    </ion-item>
+  </center>
+</ion-content>

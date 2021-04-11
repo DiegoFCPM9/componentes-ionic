@@ -1,0 +1,12 @@
+<app-header title="Picker"></app-header>
+<app-menu></app-menu>
+
+<ion-content class="ion-padding" id="main" fullscreen>
+  <ion-button (click)="clickInfo()" expand="block" fill="clear" shape="round">
+    <ion-icon slot="start" name="help-circle-outline" color="primary"></ion-icon>
+    ¿Qúe es esto?
+  </ion-button>
+
+  <ion-button expand="block" (click)="openPicker()">Show Single Column Picker</ion-button>
+  <ion-button expand="block" (click)="openPicker(2, 5, multiColumnOptions)">Show Multi Column Picker</ion-button>
+</ion-content>

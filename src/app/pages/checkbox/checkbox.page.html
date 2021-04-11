@@ -1,0 +1,61 @@
+<app-header title="Checkbox"></app-header>
+<app-menu></app-menu>
+
+<ion-content class="ion-padding" id="main" fullscreen>
+  <ion-list class="ion-padding">
+    <ion-item>
+      <ion-label>Default Checkbox</ion-label>
+      <ion-checkbox slot="end"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-list class="ion-padding">
+    <ion-item>
+      <ion-label>Disabled Checkbox</ion-label>
+      <ion-checkbox disabled="true" slot="end"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+    
+  <ion-list class="ion-padding">
+    <ion-item>
+      <ion-label>Checked Checkbox</ion-label>
+      <ion-checkbox checked="true" slot="end"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+    
+  <ion-list class="ion-padding">
+    <h3>Checkbox Colors</h3>
+    <ion-item>
+      <ion-label>Primary</ion-label>
+      <ion-checkbox color="primary" slot="end"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Secondary</ion-label>
+      <ion-checkbox color="secondary" slot="end"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Danger</ion-label>
+      <ion-checkbox color="danger" slot="end"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Light</ion-label>
+      <ion-checkbox color="light" slot="end"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Dark</ion-label>
+      <ion-checkbox color="dark" slot="end"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+    
+  <ion-list class="ion-padding">
+    <h3>Checkboxes in a List</h3>
+    <ion-item *ngFor="let c of colors" (click)=clickCheckbox(c)>
+      <ion-label>{{c.name}}</ion-label>
+      <ion-checkbox [(ngModel)]="c.selected" [color]="c.color" slot="end"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+    
+  <ion-button (click)="clickData()" expand="block" fill="clear" shape="round">
+    Ver Datos
+  </ion-button>
+</ion-content>

@@ -1,0 +1,23 @@
+<app-header title="Infinite-Scroll"></app-header>
+<app-menu></app-menu>
+
+<ion-content id="main" fullscreen>
+  <ion-list>
+    <ion-item *ngFor="let d of data; let i=index;">
+      <ion-label>Item {{i+1}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-infinite-scroll threshold="99px" (ionInfinite)="loadData($event)">
+    <!-- <br> -->
+    <!-- Modos de gif de carga: bubbles, circles, circular, crescent, dots, lines, lines-small --> 
+    <!-- <ion-infinite-scroll-content
+      loadingSpinner="/assets/Infinite.svg"
+      loadingText="Cargando información...">
+    </ion-infinite-scroll-content> -->
+    <center>
+      <section><ion-img src="/assets/Infinite.png" class="infinite"></ion-img></section>
+      <section><ion-label class="infinite-label">Cargando información...</ion-label></section>
+    </center>
+  </ion-infinite-scroll>
+</ion-content>

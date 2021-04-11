@@ -1,0 +1,60 @@
+<app-header title="Datetime"></app-header>
+<app-menu></app-menu>
+
+<ion-content class="ion-padding" id="main" fullscreen>
+  <ion-list class="ion-padding">
+    <h3>Default</h3>
+    <ion-item>
+      <ion-label>Fecha:</ion-label>
+      <ion-datetime></ion-datetime>
+    </ion-item>
+  </ion-list>
+
+  <ion-list class="ion-padding">
+    <h3>Value</h3>
+    <ion-item>
+      <ion-label>Fecha:</ion-label>
+      <ion-datetime [value]="fechaNacimiento.toISOString()"></ion-datetime>
+    </ion-item>
+  </ion-list>
+
+  <ion-list class="ion-padding">
+    <h3>Tidy</h3>
+    <ion-item>
+      <ion-label>Fecha:</ion-label>
+      <ion-datetime [value]="fechaNacimiento.toISOString()" display-format="DD MMMM YYYY"></ion-datetime>
+    </ion-item>
+  </ion-list>
+
+  <ion-list class="ion-padding">
+    <h3>ionChange</h3>
+    <ion-item>
+      <ion-label>Fecha:</ion-label>
+      <ion-datetime [value]="fechaNacimiento.toISOString()" (ionChange)="changeDate($event)"></ion-datetime>
+    </ion-item>
+  </ion-list>
+
+  <ion-list class="ion-padding">
+    <h3>Min & Max</h3>
+    <ion-item>
+      <ion-label>Fecha:</ion-label>
+      <ion-datetime [value]="fechaNacimiento.toISOString()" min="2015-01-01" max="2025-12-31"></ion-datetime>
+    </ion-item>
+  </ion-list>
+
+  <ion-list class="ion-padding">
+    <h3>Year</h3>
+    <ion-item>
+      <ion-label>Fecha:</ion-label>
+      <ion-datetime [value]="fechaNacimiento.toISOString()" display-format="YYYY" min="2015-01-01" max="2025-12-31"></ion-datetime>
+    </ion-item>
+  </ion-list>
+
+  <ion-list class="ion-padding">
+    <h3>Custom options</h3>
+    <ion-item>
+      <ion-label>Fecha:</ion-label>
+      <ion-datetime [pickerOptions]="customPickerOptions"></ion-datetime>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,73 @@
+<app-header title="Thumbnail"></app-header>
+<app-menu></app-menu>
+
+<ion-content class="ion-padding" id="main" fullscreen>
+  <ion-button (click)="clickInfo()" expand="block" fill="clear" shape="round">
+    <ion-icon slot="start" name="help-circle-outline" color="primary"></ion-icon>
+    ¿Qúe es esto?
+  </ion-button>
+
+  <h3>Thumbnail por defecto</h3>
+  <ion-thumbnail>
+    <img src="https://img.discogs.com/Cf55M73NqChq1MF_aMOGYBi5dKs=/fit-in/600x539/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-5624061-1598427961-8580.jpeg.jpg">
+  </ion-thumbnail>
+  
+  <ion-list>
+    <h3>Thumbnail con texto</h3>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="https://img.discogs.com/pJQzgsz2O0Ef4T3vgJgMqpxHvgo=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-3136465-1467337248-7267.jpeg.jpg">
+      </ion-thumbnail>
+      <ion-label class="ion-text-wrap">Víctor Jara - Pongo en tus Manos Abiertas</ion-label>
+    </ion-item>
+    <h3>Thumbnail al final con texto</h3>
+    <ion-item>
+      <ion-thumbnail slot="end">
+        <img src="https://img.discogs.com/0pdtMIb5uZTGMVEWmcIHhBCwIik=/fit-in/300x300/filters:strip_icc():format(jpeg):mode_rgb():quality(40)/discogs-images/R-9374435-1479468763-1420.jpeg.jpg">
+      </ion-thumbnail>
+      <ion-label class="ion-text-wrap">Facundo Cabral - Facundo Cabral</ion-label>
+    </ion-item>
+    <h3>Thumbnail con título y texto</h3>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="https://img.discogs.com/AvOa1dlbVh-Xyzq_Yp0DncXbZ0w=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-8215425-1457290029-7178.jpeg.jpg">
+      </ion-thumbnail>
+      <ion-label>
+        <h3>Diomedes Días</h3>
+        <p>Experiencias Vividas</p>
+      </ion-label>
+    </ion-item>
+    <h3>Thumbnail al final con título y texto</h3>
+    <ion-item>
+      <ion-thumbnail slot="end">
+        <img src="https://img.discogs.com/jFP3mfSUfePZ1MzR-FbaIOMzzR4=/fit-in/600x530/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-3239819-1506031079-6830.jpeg.jpg">
+      </ion-thumbnail>
+      <ion-label>
+        <h3>Non Servium</h3>
+        <p>El Rodillo del Kaos</p>
+      </ion-label>
+    </ion-item>
+    <h3>Thumbnail con título y doble texto</h3>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="https://img.discogs.com/SxR2zO-WXNnhSl85TT-xgQC7a1A=/fit-in/600x601/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-11384774-1515351260-2598.jpeg.jpg">
+      </ion-thumbnail>
+      <ion-label>
+        <h3>Alan Menken, Glenn Slater</h3>
+        <p>Enredados</p>
+        <p class="ion-text-wrap">(Banda Sonora Original De Walt Disney Records).</p>
+      </ion-label>
+    </ion-item>
+    <h3>Thumbnail al final con título y doble texto</h3>
+    <ion-item>
+      <ion-thumbnail slot="end">
+        <img src="https://cdns-images.dzcdn.net/images/cover/ed187326ff5b16ee4e1f8772f026633d/500x500.jpg">
+      </ion-thumbnail>
+      <ion-label>
+        <h3>Gabylonia</h3>
+        <p>Abuso de poder - Remix</p>
+        <p class="ion-text-wrap">(ft. Canserbero, ZPU, ELB, Norick, Silvito 'El Libre', I Nesta, Rotwaila, Químico, C-Kan).</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

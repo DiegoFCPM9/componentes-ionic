@@ -1,0 +1,23 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" mode="ios" text=""></ion-back-button>
+    </ion-buttons>
+    <ion-title color="primary">Reorder</ion-title>
+    <ion-chip outline color="secondary" (click)="reorder()" mode="ios" slot="end">
+      <ion-icon name="reorder-three-outline"></ion-icon>
+      <ion-label style="text-size-adjust: 5pt;">Reordenar</ion-label>
+    </ion-chip>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" id="main" fullscreen>
+  <ion-reorder-group (ionItemReorder)="doReorder($event)" [disabled]="reorderState">
+    <ion-item *ngFor="let p of personajes">
+      <ion-label>{{p}}</ion-label>
+        <ion-reorder slot="end">
+          <ion-icon color="secondary" size="large" name="extension-puzzle-outline"></ion-icon>
+        </ion-reorder>
+    </ion-item>
+  </ion-reorder-group>
+</ion-content>

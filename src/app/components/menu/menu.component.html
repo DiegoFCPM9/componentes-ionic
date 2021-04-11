@@ -1,0 +1,17 @@
+<ion-menu side="end" menuId="mainMenu" contentId="main" type="push"><!-- "overlay", "reveal", "push". -->
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Componentes</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-menu-toggle *ngFor="let p of pages | async">
+      <ion-list>
+        <ion-item [routerLink]="p.redirectTo" detail>
+          <ion-icon [name]="p.icon" slot="start" color="primary"></ion-icon>
+            <p color="secondary">{{p.name}}</p>
+        </ion-item> 
+      </ion-list>
+    </ion-menu-toggle>
+  </ion-content>
+</ion-menu>

@@ -1,0 +1,32 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Action-Sheet</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<app-header title="Action-Sheet"></app-header>
+<app-menu></app-menu>
+
+<ion-content class="ion-padding" id="main" fullscreen>
+  <ion-button (click)="clickInfo()" expand="block" fill="clear" shape="round">
+    <ion-icon slot="start" name="help-circle-outline" color="primary"></ion-icon>
+    ¿Qúe es esto?
+  </ion-button>
+  <ion-button (click)="clickActionSheet()" expand="block">
+    Mostrar Action-Sheet
+  </ion-button>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <center>
+      <ion-chip color="secondary" mode="ios" outline="true" (click)="copyCode()">
+        <ion-label><b>Copiar código</b></ion-label>
+        <ion-icon name="terminal-outline"></ion-icon>
+      </ion-chip>
+    </center>
+  </ion-toolbar>
+</ion-footer>

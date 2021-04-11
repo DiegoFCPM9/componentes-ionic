@@ -1,0 +1,32 @@
+<app-header title="Slides"></app-header>
+<app-menu></app-menu>
+
+<ion-content fullscreen scroll-y="false" id='main'>
+  <ion-slides pager="ios" class="slide-full" [options]="slideOpts">
+    <ion-slide *ngFor='let slide of slides'>
+      <ion-card mode='ios'>
+        <img [src]="slide.img" class="slide-image">
+        <ion-card-header>
+          <ion-card-subtitle>MyApp</ion-card-subtitle>
+          <ion-card-title>{{slide.titulo}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          {{slide.desc}}
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-button (click)="onClick()" expand="block" shape="round" class="btn">
+        ¡Empezemos!
+      </ion-button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="presentInfo()" expand="block" fill="clear" shape="round">
+      <ion-icon slot="start" name="help-circle-outline" color="primary"></ion-icon>
+      ¿Qúe es esto?
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

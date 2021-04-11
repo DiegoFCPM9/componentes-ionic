@@ -1,0 +1,231 @@
+<ion-header translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='/'></ion-back-button>
+    </ion-buttons>
+    <ion-title>Skeleton Text</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="toggleSkeleton()">Toggle</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" fullsreen>
+  <ion-list id="data">
+    <ion-list-header>Álbumes</ion-list-header>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="https://img.discogs.com/WUQhoZcmR3jGFjnekY0G01F0Ctw=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-9660512-1509544465-3544.jpeg.jpg">
+      </ion-thumbnail>
+      <ion-label>
+        <h3>Meet The Orphans</h3>
+        <p>Don Omar</p>
+        <p>2010</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="https://img.discogs.com/XL2g1DrgKrz3FqPENkuKx3pkDRs=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-4096880-1497650927-3449.jpeg.jpg">
+      </ion-thumbnail>
+      <ion-label>
+        <h3>El Ritmo Mundial</h3>
+        <p>Los Fabulosos Cadillacs</p>
+        <p>1988</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="https://www.cancioneros.com/fotos/ep010312_1.jpg">
+      </ion-thumbnail>
+      <ion-label>
+        <h3>Elementales</h3>
+        <p>Santiago Cruz</p>
+        <p>2019</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="https://www.humonegro.com/wp-content/99-POR-CIENTO.jpg">
+      </ion-thumbnail>
+      <ion-label>
+        <h3>99%</h3>
+        <p>Ska-P</p>
+        <p>2013</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="https://img.discogs.com/5JGVyoBqYITLtFapCPfpcoC3ORk=/fit-in/500x500/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-12547230-1537379625-5875.jpeg.jpg">
+      </ion-thumbnail>
+      <ion-label>
+        <h3>El Vals del Obrero</h3>
+        <p>Ska-P</p>
+        <p>1996</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="https://img.discogs.com/5YVIsl5YqmeJ3DauIIaH2JBQAWU=/fit-in/600x600/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-13167472-1549215657-2487.jpeg.jpg">
+      </ion-thumbnail>
+      <ion-label>
+        <h3>Manuel Medrano</h3>
+        <p>Manuel Medrano</p>
+        <p>2015</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="https://www.signos.fm/wp-content/uploads/2017/03/molotovnin%CC%83as.jpg">
+      </ion-thumbnail>
+      <ion-label>
+        <h3>¿Dónde Jugarán las Niñas?</h3>
+        <p>Molotov</p>
+        <p>1997</p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <img src="https://cdns-images.dzcdn.net/images/cover/693f4b95ab11d207cd0f3478487becc9/500x500.jpg">
+      </ion-thumbnail>
+      <ion-label>
+        <h3>Sanazion</h3>
+        <p>Zona Ganja</p>
+        <p>2007</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ion-list id="skeleton">
+    <ion-list-header>
+      <ion-skeleton-text animated style="width: 80px"></ion-skeleton-text>
+    </ion-list-header>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ion-skeleton-text></ion-skeleton-text>
+      </ion-thumbnail>
+      <ion-label>
+        <h3>
+          <ion-skeleton-text animated style="width: 80%"></ion-skeleton-text>
+        </h3>
+        <p>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+        </p>
+        <p>
+          <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+        </p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

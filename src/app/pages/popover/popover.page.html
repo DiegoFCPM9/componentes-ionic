@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="" color="primary" mode="ios"></ion-back-button>
+    </ion-buttons>
+    <ion-title color="primary">Popover</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon slot="icon-only" name="person-outline" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" fullscren>
+  <ion-button (click)="clickInfo()" expand="block" fill="clear" shape="round">
+    <ion-icon slot="start" name="help-circle-outline" color="primary"></ion-icon>
+    ¿Qúe es esto?
+  </ion-button>
+
+  <ion-button (click)="presentPopover($event)" expand="block" shape="round">
+    Ver popover
+  </ion-button>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon slot="icon-only" name="person" color="primary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Footer del popover</ion-title>
+  </ion-toolbar>
+</ion-footer>
